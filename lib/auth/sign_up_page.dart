@@ -142,7 +142,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     hintText: '********',
                     label: SizedBox(
-                      width: 135,
+                      width: 105,
                       child: Row(
                         children: [
                           const Text(
@@ -211,7 +211,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     hintText: '********',
                     label: SizedBox(
-                      width: 135,
+                      width: 130,
                       child: Row(
                         children: [
                           const Text(
