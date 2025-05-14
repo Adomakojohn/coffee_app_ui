@@ -11,8 +11,8 @@ class ProductCard extends StatelessWidget {
     required this.imagePath,
     required this.price,
     this.isHighlighted = false,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
