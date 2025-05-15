@@ -31,7 +31,7 @@ class ProductCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: isHighlighted
                       ? const Color(0xFF55433C)
-                      : const Color(0xFFDCDCDC),
+                      : const Color.fromARGB(255, 238, 238, 238),
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: Padding(

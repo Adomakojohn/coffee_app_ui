@@ -21,7 +21,7 @@ class FrozenBeveragesSection extends StatelessWidget {
           // final isHighlighted = index == 0;
           return Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
+            child: SizedBox(
               width: 240,
               height: 270,
               child: Stack(
