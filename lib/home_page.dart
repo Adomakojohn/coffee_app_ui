@@ -4,6 +4,7 @@ import 'models/product.dart';
 import 'widgets/category_tab.dart';
 import 'widgets/product_card.dart';
 import 'widgets/frozen_beverages_section.dart';
+import 'cart_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -54,19 +55,54 @@ class _HomePageState extends State<HomePage> {
                       AssetImage('assets/images/lightmode_authbackground.png'),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 top: 100,
                 left: 10,
                 right: 10,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 30,
                       backgroundImage:
                           AssetImage('assets/images/profile_picture.png'),
                     ),
-                    Icon(Icons.menu, size: 28, color: Color(0xFF131A2E)),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CartPage()),
+                            );
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 1,
+                                  blurRadius: 2,
+                                  offset: const Offset(0, 1),
+                                ),
+                              ],
+                            ),
+                            child: const Icon(
+                              Icons.shopping_cart_outlined,
+                              size: 24,
+                              color: Color(0xFF131A2E),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        const Icon(Icons.menu,
+                            size: 28, color: Color(0xFF131A2E)),
+                      ],
+                    ),
                   ],
                 ),
               ),
